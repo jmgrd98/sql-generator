@@ -1,4 +1,3 @@
-import React from 'react'
 import MessageDisplay from './MessageDisplay';
 
 interface UserMessage {
