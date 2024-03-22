@@ -1,5 +1,3 @@
-
-
 interface CodeDisplayProps {
   text: string
 }

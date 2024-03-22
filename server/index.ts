@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-// import OpenAI from 'openai';
 import dotenv from 'dotenv';
 
 const app = express();
@@ -13,8 +12,6 @@ const apiKey: any | undefined = process.env.OPENAI_API_KEY;
 if (!apiKey) {
     throw new Error('OpenAI API key is not provided.');
 }
-
-// const openai = new OpenAI(apiKey);
 
 app.post('/completions', async (req: any, res: any) => {
 
