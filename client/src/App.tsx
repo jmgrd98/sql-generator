@@ -17,14 +17,15 @@ function App() {
       const options = {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           message: value
         }),
       }
-      const response = await fetch('https://chatgpt-server-completions.onrender.com/completions', options);
+      const response = await fetch('https://chatgpt-server-completions.onrender.com/sql-query', options);
       const data = await response.json();
+      console.log(data)
       const userMessage = {
         role: "user",
         content: value
