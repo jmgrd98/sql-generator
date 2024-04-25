@@ -7,7 +7,7 @@ interface MessageDisplayProps {
 
 const MessageDisplay = ({ message }: MessageDisplayProps) => {
   return (
-    <div className='w-full flex rounded gap-3 bg-black/10 p-3'>
+    <div className='w-full flex rounded gap-3 bg-black/10 p-3 text-white/50'>
       <p>•</p>
       <p>{message.content}</p>
     </div>
