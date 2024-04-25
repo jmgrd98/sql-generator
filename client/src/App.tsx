@@ -25,7 +25,6 @@ function App() {
       }
       const response = await fetch('https://chatgpt-server-completions.onrender.com/sql-query', options);
       const data = await response.json();
-      console.log(data)
       const userMessage = {
         role: "user",
         content: value
@@ -48,7 +47,7 @@ function App() {
   return (
     <div className='h-screen w-screen p-20'>
      <MessagesDisplay userMessages={filteredUserMessages} />
-     <input value={value} onChange={(e: any) => setValue(e.target.value)} className='w-full rounded p-2 my-5 border border-black/20' placeholder='Digite aqui' />
+     <input value={value} onChange={(e: any) => setValue(e.target.value)} className='w-full rounded p-2 my-5 border border-black/20 text-white/50' placeholder='Digite aqui' />
      <CodeDisplay text={latestCode?.choices[0].message.content || ''} />
 
      <div className='flex items-center justify-end gap-2 mt-5'>
